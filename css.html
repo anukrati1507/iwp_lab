@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.js" integrity="sha512-1lagjLfnC1I0iqH9plHYIUq3vDMfjhZsLy9elfK89RBcpcRcx4l+kRJBSnHh2Mh6kLxRHoObD1M5UTUbgFy6nA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+<style>
+
+</style>
+
+
+</head>
+<body>
+<center><h1>18BCE0529 - ANUKRATI SAXENA</h1></center>
+<div id="rm" >
+    THIS IS AN TEXT DISPLAYED WITH CSS AND WITHOUT CSS DEPENDING UPON BUTTON YOU CLICK.
+    <br>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt expedita doloremque accusantium sit amet.
+    <br>
+    Quod voluptates sapiente at repudiandae vitae explicabo dolorum assumenda ipsa minus! Impedit nulla veniam nesciunt harum.
+</div>
+<button id="ad">click on  to add css</button> <button id="rem">click on to remove css </button>
+<script>
+    var cs=$("#rm")
+   $("#ad").click(function(){
+       var sty = {
+           "background-color" : "cyan",
+           "font-family":"Arial, Helvetica, sans-serif",
+           "color":"purple",
+           "height":"80vh"
+       }
+       cs.css(sty)
+   })
+
+   $("#rem").click(function(){
+       cs.css({
+           "background-color":"",
+           "font-family":"",
+           "color" :""
+       })
+   })
+
+$("sh").click(function(){
+    var srd = $("#ser")
+    srd.keyup(function(){
+    var d =this.val()
+    if($("#li").val()==d){  
+
+    $(this).css("color","blue")}
+})
+
+})
+</script>
+</body>

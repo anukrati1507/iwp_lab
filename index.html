@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.js" integrity="sha512-1lagjLfnC1I0iqH9plHYIUq3vDMfjhZsLy9elfK89RBcpcRcx4l+kRJBSnHh2Mh6kLxRHoObD1M5UTUbgFy6nA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+<style>
+
+</style>
+
+
+</head>
+<h1>18BCE0529 - ANUKRATI SAXENA</h1>
+<div id="bs">
+    <h2>i</h2>
+<button id="red">Red</button>
+<button id="blue">Blue</button>
+<button id="green">Green</button>   
+</div>
+<hr>
+<div id="extrtx">
+<h2>ii</h2>
+    <h3>Click on extract to extract elements </h3>
+<ul id="tx" style="display:none;background-color: cyan;">
+ <li>My name is Anukrati</li>   
+  <li>I am from CSE branch</li>
+  <li>My reg number is 18BCE0529</li>
+  <li>I am from Jhansi.</li>
+</ul>
+<button id="extr">Extract</button>
+
+</div>
+
+<hr>
+
+
+<div id="sr">
+    <ol id="twn">
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+        <li>d</li>
+        <li>e</li>
+        <li>f</li>
+        <li>g</li>
+        <li>h</li>
+    </ol>
+    <input id="ser" type = "text"> <button id="sh">search</button>
+
+</div>
+<hr>
+<div id="chk">
+<h2>iv</h2>
+Click on the textbox to enable submit button
+<input id="ch" type="checkbox">
+<input type="submit" id="sb" disabled>
+
+</div>
+<hr>
+<div id="lrd">
+    <h2>v</h2>
+    Click to know if it is a left or right click.
+    <div class="output"></div>
+    <button id="lr">click on it to know left or right</button>
+    </div>
+<hr>
+<div>
+    <h2>vi</h2>
+    <div id="rm">
+        THIS IS AN TEXT DISPLAYED WITH CSS AND WITHOUT CSS DEPENDING UPON BUTTON YOU CLICK
+    </div>
+    <button id="ad">click on  to add css</button> <button id="rem">click on to remove css </button>
+</div>    
+<body>
+<script>
+    
+   var rd=  $("#red")
+   rd.mouseover(function(){
+       $("body").css("background-color","red")
+   })
+   
+   var bl=  $("#blue")
+   bl.mouseover(function(){
+       $("body").css("background-color","skyblue")
+   })   
+   var gr=  $("#green")
+   gr.mouseover(function(){
+       $("body").css("background-color","lightgreen")
+   })
+var ex= $("#extr")
+ex.click(function(){
+$("#tx").toggle()
+
+})
+
+var ck = $("#ch")
+
+ck.mousedown(function(){
+    var tr = ck.is(":checked")
+if(tr)
+    {
+    $("#sb").prop("disabled",true)
+}
+else{
+    $("#sb").prop("disabled",false)
+}
+})
+
+$('#lr').mousedown(function(event) { 
+            switch (event.which) { 
+                case 1: 
+                    $('.output').text('Left Mouse Button')  
+                    $(".output").css({"background-color":"violet",
+                        "color":"pink"    })
+                    break; 
+               
+                case 3: 
+                    $('.output').text('Right Mouse Button'); 
+                    $(".output").css({"background-color":"orange"})
+                    break; 
+                default: 
+                    break; 
+            } 
+        }); 
+
+        var cs=$("#rm")
+   $("#ad").click(function(){
+       var sty = {
+           "background-color" : "pink",
+           "font-family":"Arial, Helvetica, sans-serif",
+           "color":"purple"
+       }
+       cs.css(sty)
+   })
+
+   $("#rem").click(function(){
+       cs.css({
+           "background-color":"",
+           "font-family":"",
+           "color" :""
+       })
+   })
+
+$("sh").click(function(){
+    var srd = $("#ser")
+    srd.keyup(function(){
+    var d =this.val()
+    if($("#li").val()==d){  
+
+    $(this).css("color","blue")}
+})
+
+})
+
+
+</script>
+
+</body>
+</html>

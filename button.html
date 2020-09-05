@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.js" integrity="sha512-1lagjLfnC1I0iqH9plHYIUq3vDMfjhZsLy9elfK89RBcpcRcx4l+kRJBSnHh2Mh6kLxRHoObD1M5UTUbgFy6nA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+<style>
+
+</style>
+
+
+</head>
+<body>
+<h1><center>18BCE0529 - ANUKRATI SAXENA</center></h1>
+<div id="bs">
+    <h2><center>This is an experiment to change background color according to the button on which we hover.</center></h2>
+<center>
+    <button id="red" style="width: 80px; color:red; background-color: black;">Red</button>
+<button id="blue" style="width: 80px; color:blue; background-color: black;">Blue</button>
+<button id="green" style="width: 80px; color:green; background-color: black;">Green</button>   
+</center>
+</div>
+<script>
+    
+    var rd=  $("#red")
+    rd.mouseover(function(){
+        $("body").css("background-color","red")
+    })
+    
+    var bl=  $("#blue")
+    bl.mouseover(function(){
+        $("body").css("background-color","skyblue")
+    })   
+    var gr=  $("#green")
+    gr.mouseover(function(){
+        $("body").css("background-color","green")
+    })
+
+</script>
+
+</body>
+</html>
